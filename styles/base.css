@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 body{
     margin: 0;
     padding: 0;
@@ -136,7 +134,7 @@ main .card .rondonia img{
     display: inline;
 }
 
-main .card .rondonia h1{
+main .card .rondonia h2{
     text-align: center;
     border-bottom: 1px solid var(--secondary-color);
     margin-bottom: 1rem;
