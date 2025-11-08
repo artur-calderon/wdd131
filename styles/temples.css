@@ -34,7 +34,7 @@ header{
     cursor: pointer;
 }
 
-header h1{
+header h2{
     grid-column: 1;
     grid-row: 1;
 }
