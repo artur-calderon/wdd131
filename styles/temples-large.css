@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+    header {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    header nav {
+        display: flex !important;
+        grid-column: 2;
+        grid-row: 1;
+        justify-content: end !important;
+    }
+
+    header nav ul {
+        flex-direction: row !important;
+        justify-content:space-evenly;
+        gap: 2rem;
+    }
+
+    header h1 {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: start;
+    }
+}
