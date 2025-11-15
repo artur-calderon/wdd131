@@ -5,8 +5,8 @@ yearElement.textContent = currentYear;
 const modifiedElement = document.getElementById("lastmodified");
 modifiedElement.textContent = document.lastModified;
 
-const T = 10;
-const V = 5;
+const T = 30; // Temperatura em Celsius
+const V = 10; // Velocidade do vento em km/h
 
 function calculateWindChill(temp, speed) {
 	return (
