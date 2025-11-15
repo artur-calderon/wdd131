@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Artur Calderon" />
+		<meta
+			name="description"
+			content="A page that show information for a place that i like" />
+		<title>Ji-Paraná - Heart of Rondônia</title>
+		<link rel="stylesheet" href="styles/place.css" />
+		<link rel="stylesheet" href="styles/place-large.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Ji-Paraná - RO</h1>
+		</header>
+
+		<main>
+			<section class="hero">
+				<picture>
+					<source
+						srcset="images/jipa-large.webp"
+						media="(min-width: 900px)" />
+					<source srcset="images/jipa_city.webp" />
+					<img src="images/jipa-large.webp" alt="Ji-Paraná" />
+				</picture>
+			</section>
+
+			<section class="data-card">
+				<h2>Data</h2>
+				<dl>
+					<dt>Área:</dt>
+					<dd>6.896,65 km²</dd>
+					<dt>População:</dt>
+					<dd>140.000,00</dd>
+					<dt>Idiomas:</dt>
+					<dd>Português</dd>
+					<dt>Moeda:</dt>
+					<dd>Real Brasileiro</dd>
+					<dt>Fuso Horário:</dt>
+					<dd>UTC−4 (AMT – Hora da Amazônia)</dd>
+					<dt>Código de Chamada:</dt>
+					<dd>+55 Brasil</dd>
+					<dt>TLD Internet:</dt>
+					<dd>.br</dd>
+				</dl>
+			</section>
+
+			<section class="weather-card">
+				<h2 class="weather-title">Weather</h2>
+				<div class="weather-icon-mobile">
+					<img
+						src="images/wheathericon.svg"
+						alt="Ícone de Sol e Nuvem"
+						width="50"
+						height="50" />
+				</div>
+
+				<dl>
+					<dt>Temperatura:</dt>
+					<dd>10 °C</dd>
+					<dt>Condições:</dt>
+					<dd>Parcialmente Nublado</dd>
+					<dt>Vento:</dt>
+					<dd>5 km/h</dd>
+					<dt>Sensação Térmica (Wind Chill):</dt>
+					<dd id="wind-chill">N/A</dd>
+				</dl>
+			</section>
+		</main>
+
+		<footer>
+			<p>
+				&copy;<span id="currentyear"></span> Artur Calderon - Ji-Paraná,
+				RO
+			</p>
+			<p>Última Modificação: <span id="lastmodified"></span></p>
+		</footer>
+
+		<script src="scripts/place.js" defer></script>
+	</body>
+</html>
