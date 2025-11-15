@@ -36,7 +36,7 @@
     }
 
     .weather-title::after {
-        content: url("/images/wheathericon.svg");
+        content: "🌥️";
         font-size: 1.2em;
         padding-left: 5px;
     }
