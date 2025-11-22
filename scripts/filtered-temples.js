@@ -23,12 +23,15 @@ import { temples } from "./temples-base.js";
 
 const container = document.querySelector(".album");
 
+// I have to search how to do this better
 function normalizeDate(str) {
 	const [year, month, day] = str.replace(/,/g, "").split(" ");
 	return new Date(`${month} ${day}, ${year}`);
 }
 
 renderTemples();
+
+// Also, if I added an event for each button, I don't think it would be clean code. That's why I researched a better way to do it.
 document.querySelector("ul").addEventListener("click", (event) => {
 	if (event.target.closest(".oldest-button")) {
 		temples.sort(
