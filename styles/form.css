@@ -1,0 +1,111 @@
+:root {
+    --color-bg: #f0f7ff;
+    --color-header: #003566;
+    --color-panel: #d9eaff;
+    --color-text: #1a1a1a;
+    --color-border: #99b8cc;
+    --color-button-bg: #e1effa;
+    --color-button-hover: #cfe3f5;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+header {
+    background-color: var(--color-header);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    color: #fff;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+main {
+    padding: 1rem;
+}
+
+form {
+    background-color: var(--color-panel);
+    padding: 1.2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+    /* width: 100%; */
+    padding: 0.8rem;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+fieldset legend {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+fieldset label {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 1.2rem;
+}
+
+fieldset label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+input[type="submit"] {
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: var(--color-button-bg);
+    border: 2px solid #aaa;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--color-button-hover);
+}
+
+footer {
+    background-color: var(--color-header);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+

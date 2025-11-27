@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Review Submitted</title>
+		<link rel="stylesheet" href="/styles/form.css" />
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: var(--color-bg);
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				text-align: center;
+				color: var(--color-text);
+			}
+
+			main {
+				background-color: var(--color-panel);
+				padding: 2rem;
+				border-radius: 12px;
+				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+				width: 90%;
+				max-width: 400px;
+			}
+
+			h2 {
+				color: var(--color-header);
+				margin-bottom: 1rem;
+			}
+
+			#counterDisplay {
+				font-size: 1.1rem;
+				margin-top: 1rem;
+			}
+
+			button {
+				margin-top: 1.5rem;
+				padding: 0.8rem 1.5rem;
+				font-size: 1rem;
+				color: #fff;
+				background-color: var(--color-header);
+				border: none;
+				border-radius: 6px;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<h2>Thank you for your review!</h2>
+			<p id="counterDisplay"></p>
+			<button onclick="window.location.href='form.html'">
+				Submit Another Review
+			</button>
+		</main>
+
+		<script>
+			// increment review counter
+			let count = Number(localStorage.getItem("reviewCount")) || 0;
+			count++;
+			localStorage.setItem("reviewCount", count);
+
+			document.getElementById(
+				"counterDisplay"
+			).textContent = `You have submitted ${count} reviews.`;
+		</script>
+	</body>
+</html>
