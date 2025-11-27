@@ -17,7 +17,6 @@
 		</header>
 		<main>
 			<form method="get" action="review.html">
-				<!-- PRODUCT NAME -->
 				<label for="product">Product Name</label>
 				<select id="product" name="product" required>
 					<option value="" disabled selected>
@@ -25,42 +24,64 @@
 					</option>
 				</select>
 
-				<!-- OVERALL RATING -->
 				<fieldset>
 					<legend>Overall Rating</legend>
-					<label>
-						<input type="radio" name="rating" value="1" required />
-						☆
-					</label>
-					<label>
-						<input type="radio" name="rating" value="2" required />
-						☆☆
-					</label>
-					<label>
-						<input type="radio" name="rating" value="3" required />
-						☆☆☆
-					</label>
-					<label>
-						<input type="radio" name="rating" value="4" required />
-						☆☆☆☆
-					</label>
-					<label>
-						<input type="radio" name="rating" value="5" required />
-						☆☆☆☆☆
-					</label>
+					<label for="rate1"
+						><input
+							type="radio"
+							id="rate1"
+							name="rating"
+							value="1"
+							required />
+						☆</label
+					>
+					<label for="rate2"
+						><input
+							type="radio"
+							id="rate2"
+							name="rating"
+							value="2"
+							required />
+						☆☆</label
+					>
+					<label for="rate3"
+						><input
+							type="radio"
+							id="rate3"
+							name="rating"
+							value="3"
+							required />
+						☆☆☆</label
+					>
+					<label for="rate4"
+						><input
+							type="radio"
+							id="rate4"
+							name="rating"
+							value="4"
+							required />
+						☆☆☆☆</label
+					>
+					<label for="rate5"
+						><input
+							type="radio"
+							id="rate5"
+							name="rating"
+							value="5"
+							required />
+						☆☆☆☆☆</label
+					>
 				</fieldset>
 
-				<!-- INSTALLATION DATE -->
 				<label for="install">Date of Installation</label>
 				<input type="date" id="install" name="install" required />
 
-				<!-- USEFUL FEATURES -->
 				<fieldset>
 					<legend>
 						Which features did you find useful? (Check all that
 						apply)
 					</legend>
-					<label
+					<label for="durability"
 						><input
 							type="checkbox"
 							id="durability"
@@ -68,7 +89,7 @@
 							value="Durability" />
 						Durability</label
 					>
-					<label
+					<label for="ease"
 						><input
 							type="checkbox"
 							id="ease"
@@ -76,7 +97,7 @@
 							value="Ease of Use" />
 						Ease of Use</label
 					>
-					<label
+					<label for="performance"
 						><input
 							type="checkbox"
 							id="performance"
@@ -84,7 +105,7 @@
 							value="Performance" />
 						Performance</label
 					>
-					<label
+					<label for="design"
 						><input
 							type="checkbox"
 							id="design"
@@ -94,15 +115,12 @@
 					>
 				</fieldset>
 
-				<!-- WRITTEN REVIEW -->
 				<label for="review">Written Review (Optional)</label>
 				<textarea id="review" name="review"></textarea>
 
-				<!-- USER NAME -->
 				<label for="username">Your Name (Optional)</label>
 				<input type="text" id="username" name="username" />
 
-				<!-- SUBMIT BUTTON -->
 				<input type="submit" value="Post Review" />
 			</form>
 		</main>
