@@ -1,0 +1,250 @@
+/* fonts are loaded in the HTML files (Montserrat + Open Sans) */
+
+/* Color / typography variables */
+:root {
+    --primary: #1F1F1F;
+    --secondary: #E50914;
+    --accent: #FFFFFF;
+    --card-bg: #2A2A2A;
+    --max-width: 1100px;
+}
+
+/* Reset / base */
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', system-ui, Arial, sans-serif;
+    background-color: var(--primary);
+    color: var(--accent);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container utility */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+header {
+    background: var(--primary);
+    border-bottom: 3px solid var(--secondary);
+    padding: 1.25rem 0;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+nav a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
+    padding: .25rem .5rem;
+}
+
+nav a[aria-current="page"],
+nav a.active {
+    border-bottom: 2px solid var(--secondary);
+}
+
+/* Main layout specifics */
+main {
+    padding: 1.25rem 0
+}
+
+.home-main .intro {
+    max-width: 900px;
+    margin: 0 auto 1.5rem auto;
+    text-align: center;
+}
+
+.home-main .intro h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin: .25rem 0;
+    font-size: 1.6rem;
+}
+
+.home-main .intro p {
+    margin: 0.5rem 0 0;
+    color: #e6e6e6;
+    line-height: 1.5;
+}
+
+/* ====== Preview grid on index (cards with only image + title) ====== */
+.preview-grid {
+    max-width: var(--max-width);
+    margin: 1rem auto;
+    padding: 0 1rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    align-items: start;
+}
+
+/* The preview card is an <a> */
+.preview-card {
+    display: block;
+    text-decoration: none;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.04));
+    border-radius: 10px;
+    padding: 0.5rem;
+    transition: transform .18s ease, box-shadow .18s ease;
+    overflow: hidden;
+    border-left: 4px solid transparent;
+    color: var(--accent);
+    text-align: center;
+}
+
+/* image inside preview card */
+.preview-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* title under image */
+.preview-card h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--accent);
+    padding: 0.25rem 0;
+}
+
+/* hover / focus effects */
+.preview-card:hover,
+.preview-card:focus {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+    border-left-color: var(--secondary);
+    outline: none;
+}
+
+.preview-card:focus {
+    box-shadow: 0 0 0 4px rgba(229, 9, 20, 0.12);
+}
+
+/* ====== Movie grid (movies.html) ====== */
+.movie-grid {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+/* full movie card */
+.movie-card {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary);
+    transition: transform .16s ease, box-shadow .16s ease;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: .75rem;
+}
+
+.movie-card h3 {
+    margin: .25rem 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+}
+
+.movie-card p {
+    margin: .35rem 0;
+    color: #e8e8e8;
+    line-height: 1.4
+}
+
+/* card hover */
+.movie-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.55);
+}
+
+/* Form & contact page */
+form {
+    max-width: 720px;
+    margin: 0 auto;
+    background: transparent;
+    padding: 1rem;
+    display: grid;
+    gap: .6rem
+}
+
+input,
+textarea,
+select {
+    padding: .6rem;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background: #1f1f1f;
+    color: var(--accent)
+}
+
+label {
+    font-weight: 600;
+    color: #ddd
+}
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+    border-top: 3px solid var(--secondary);
+    text-align: center;
+    padding: 1rem;
+    color: #ddd;
+}
+
+/* Responsive tweaks */
+@media (max-width:600px) {
+    .preview-card img {
+        height: 160px
+    }
+
+    .movie-card img {
+        height: 220px
+    }
+
+    header h1 {
+        font-size: 1.25rem
+    }
+
+    .home-main .intro h2 {
+        font-size: 1.25rem
+    }
+}
